@@ -1,0 +1,35 @@
+# =========================
+# React (frontend)
+# =========================
+# dependencies
+frontend/node_modules/
+frontend/package-lock.json
+frontend/yarn.lock
+
+# build output
+frontend/build/
+frontend/dist/
+
+# misc
+*.pem
+*.crt
+*.key
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# =========================
+# Cache
+# =========================
+.cache/
+.npm/
+.parcel-cache/
+.next/
+out/

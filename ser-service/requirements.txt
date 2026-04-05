@@ -1,0 +1,21 @@
+# Speech Emotion Recognition Service Dependencies
+# All FREE and open-source
+
+flask==3.0.0
+flask-cors==4.0.0
+gunicorn==21.2.0
+
+# Audio processing (FREE)
+librosa==0.10.1
+soundfile==0.12.1
+numpy>=1.21.0
+
+# SpeechBrain for emotion recognition (FREE, uses HuggingFace)
+# Uses wav2vec2-based model trained on IEMOCAP dataset
+speechbrain==1.0.0
+torch>=2.0.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+
+# Alternative lightweight option (uncomment if SpeechBrain is too heavy)
+# pyAudioAnalysis==0.3.14

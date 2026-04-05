@@ -1,0 +1,150 @@
+Perfect 👍 Let’s lock this down into a **Product Requirements Document (PRD)** + **Tech Stack** + **Execution Plan** for your depression detection system. I’ll make it clear enough that you can use it with your team, guide, or even for your final report.
+
+---
+
+# 📄 Product Requirements Document (PRD)
+
+**Project Title**: AI-Assisted Depression Detection and Lifestyle Recommendation System
+
+**Prepared For**: Final Year B.Tech Project (8th Semester)
+**Prepared By**: \[Your Team’s Names]
+
+---
+
+## 1. **Problem Statement**
+
+Depression is a growing concern among students and young adults, yet existing screening methods (e.g., PHQ-9) are rigid, language-limited, and usually presented as multiple-choice questionnaires. These methods lack the natural conversational flow that real users prefer and do not account for cultural or linguistic nuances.
+
+---
+
+## 2. **Objective**
+
+* Build an AI-powered system that screens for depression through **conversational text or speech**.
+* Map free-text answers to **clinically validated scores (PHQ-9)**.
+* Provide **personalized lifestyle recommendations** and follow-up suggestions.
+* Support **multilingual input** and **speech-to-text / text-to-speech** for accessibility.
+* Enable secure **user authentication and dashboard** for tracking progress.
+
+---
+
+## 3. **Scope**
+
+* **Prototype (MVP)**
+
+  * User registration/login (MongoDB + auth)
+  * Chatbot flow with fixed + adaptive questions (PHQ-9 based)
+  * Free-text answers → mapped to PHQ-9 scores via LLM
+  * Depression score + personalized recommendations
+  * TTS (questions read aloud) + STT (speech input for answers)
+* **Extended Features (Phase 2)**
+
+  * Multilingual support (English + Indian languages)
+  * Adaptive questioning from extended bank
+  * Cultural idiom detection (*“dil bhaari hai”*, etc.)
+  * Dashboard analytics (progress tracking, graphs)
+  * Optional: voice emotion analysis (pitch, tone)
+
+---
+
+## 4. **Target Users**
+
+* **Primary**: University students (aged 18–25)
+* **Secondary**: Young professionals under stress
+
+---
+
+## 5. **Key Features**
+
+### **Core**
+
+1. **User Profile & Auth** → login/signup, encrypted storage
+2. **Conversational Assessment** → fixed 2 questions + dynamic flow
+3. **LLM-Powered Scoring** → free-text mapped to PHQ-9 categories
+4. **Depression Score** → mild/moderate/severe levels
+5. **Personalized Recommendations** → lifestyle + follow-up
+
+### **Extended**
+
+1. **STT & TTS** → voice-based accessibility
+2. **Multilingual** → Hindi, Telugu, English support
+3. **Adaptive Questioning** → reduced fatigue, higher accuracy
+4. **Analytics Dashboard** → score history, improvement trends
+
+---
+
+## 6. **Non-Functional Requirements**
+
+* **Privacy & Security**: Store responses securely in MongoDB (hashed IDs, no raw personal data).
+* **Scalability**: Should handle multiple users simultaneously.
+* **Accessibility**: Speech input/output, multilingual UI.
+* **Ethical Use**: Disclaimer stating “not a medical diagnosis, only screening tool.”
+
+---
+
+## 7. **Success Metrics**
+
+* Accuracy of free-text → PHQ-9 mapping (≥80% vs. human raters).
+* User engagement (completion rate of assessments ≥70%).
+* Usability feedback (≥4/5 rating on ease of use).
+
+---
+
+# 🛠 Tech Stack
+
+### **Frontend**
+
+* **React.js / Next.js** → responsive UI + dashboard
+* **Tailwind CSS** → styling
+* **Web Speech API / Vosk** → STT & TTS integration
+
+### **Backend**
+
+* **Node.js + Express** → server
+* **MongoDB Atlas** → user data & response storage
+* **JWT** → authentication
+
+### **AI/LLM**
+
+* **Gemini API** (free tier) → free-text → PHQ-9 mapping & recommendations
+* **Fallback**: HuggingFace DistilBERT / IndicBERT for multilingual sentiment
+* **Optional**: pyAudioAnalysis / librosa for speech tone features
+
+### **Hosting/Infra**
+
+* **Frontend**: Vercel/Netlify
+* **Backend**: Render/Heroku (free tier)
+* **Database**: MongoDB Atlas (cloud free tier)
+
+---
+
+# 📅 Project Roadmap (10 Weeks)
+
+### **Phase 1: Prototype**
+
+* **Week 1–2**: Setup auth, MongoDB, basic dashboard
+* **Week 3–4**: Chatbot flow with fixed + adaptive questions
+* **Week 5**: LLM (Gemini) integration for PHQ-9 mapping + recommendations
+* **Week 6**: Depression score output + simple lifestyle suggestions
+
+### **Phase 2: Enhancements**
+
+* **Week 7**: STT + TTS integration
+* **Week 8**: Multilingual support (start with Hindi + Telugu)
+* **Week 9**: Dashboard analytics (charts, trends)
+* **Week 10**: Testing, polishing, final report & demo
+
+---
+
+# 🚀 Improvements for Research Paper
+
+* Novelty comes from:
+
+  1. **Free-text → PHQ-9 mapping via LLM** (instead of MCQs).
+  2. **Adaptive question selection** (reduced fatigue).
+  3. **Cultural adaptation** (idioms, multilingual support).
+  4. **Optional multimodality (speech cues)**.
+
+* These can be written up as:
+
+  * *“AI-Assisted Conversational Screening for Depression: A Multilingual and Adaptive Approach”*
+
